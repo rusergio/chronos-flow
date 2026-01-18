@@ -1,0 +1,24 @@
+{
+  "name": "ChronosFlow",
+  "short_name": "ChronosFlow",
+  "description": "Sistema de gestión de tiempo y planificación de objetivos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/a_stylized_graphic_d-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/a_stylized_graphic_d-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
