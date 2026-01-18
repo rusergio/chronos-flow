@@ -4,22 +4,26 @@
 
 # ChronosFlow - Sistema de Gestión de Tiempo
 
+Aplicação para gestão de horas de trabalho e planificação de horas de estudo.
+
 Sistema de seguimiento de tiempo y planificación de objetivos con autenticación de usuarios.
 
 ## Características
 
-- 🔐 Autenticación con email/contraseña y Google
+- 🔐 Autenticación con email/contraseña (almacenamiento local para pruebas)
 - 👤 Tres tipos de usuarios: Empregado, Patrão, Estudante
 - ⏱️ Registro y seguimiento de horas trabajadas
+- 📅 Calendario mensual interactivo para visualizar horas registradas
 - 📊 Dashboard con visualizaciones
-- 🤖 Asistente de IA para planificación
+- 💰 Calculadora de salario basada en horas acumuladas
+- 📚 Calculadora de horas de estudio diarias
+- 🎨 Interfaz moderna con Tailwind CSS
 
 ## Configuración
 
 ### Prerrequisitos
 
 - Node.js instalado
-- Cuenta de Firebase (para autenticación)
 
 ### Instalación
 
@@ -28,40 +32,21 @@ Sistema de seguimiento de tiempo y planificación de objetivos con autenticació
    npm install
    ```
 
-2. Configurar Firebase:
-   - Crea un proyecto en [Firebase Console](https://console.firebase.google.com/)
-   - Habilita Authentication > Sign-in method > Email/Password y Google
-   - Obtén las credenciales de tu proyecto Firebase
-   - Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
-
-   ```env
-   VITE_FIREBASE_API_KEY=tu-api-key
-   VITE_FIREBASE_AUTH_DOMAIN=tu-proyecto.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=tu-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=tu-proyecto.appspot.com
-   VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
-   VITE_FIREBASE_APP_ID=tu-app-id
-   ```
-
-3. (Opcional) Configurar Gemini API Key para el asistente de IA:
-   ```env
-   VITE_GEMINI_API_KEY=tu-gemini-api-key
-   ```
-
-4. Ejecutar la aplicación:
+2. Ejecutar la aplicación:
    ```bash
    npm run dev
    ```
 
 ## Uso
 
-1. **Registro**: Al abrir la aplicación, podrás registrarte seleccionando tu categoría (Empregado, Patrão o Estudante)
-2. **Autenticación**: Puedes registrarte con email/contraseña o usar "Continuar con Google"
+1. **Registro**: Al abrir la aplicación, podrás registrarte seleccionando tu(s) categoría(s) (Empregado, Patrão y/o Estudante)
+2. **Autenticación**: Puedes registrarte con email/contraseña (los datos se almacenan localmente para pruebas)
 3. **Inicio de sesión**: Si ya tienes cuenta, puedes iniciar sesión directamente
+4. **Dashboard**: Accede a tu dashboard según tu rol y gestiona tus horas
 
 ## Tecnologías
 
 - React + TypeScript
-- Firebase Authentication
 - Vite
 - Tailwind CSS
+- Local Storage (para pruebas)
