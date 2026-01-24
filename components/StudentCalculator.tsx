@@ -25,11 +25,17 @@ const StudentCalculator: React.FC = () => {
     const hours = Math.floor(hoursPerDayRaw);
     const minutes = Math.round((hoursPerDayRaw - hours) * 60);
 
+    // Calcular fecha de finalización
+    const start = new Date(startDate);
+    const endDate = new Date(start);
+    endDate.setMonth(endDate.getMonth() + durationMonthsNum);
+
     return {
       totalDays,
       hoursPerDayRaw,
       hours,
-      minutes
+      minutes,
+      endDate
     };
   }, [totalHoursNum, durationMonthsNum, startDate]);
 
@@ -124,6 +130,17 @@ const StudentCalculator: React.FC = () => {
                 <div>
                   <div className="text-indigo-200 text-xs uppercase font-bold">Meta Semanal</div>
                   <div className="text-xl font-bold">{(calculation.hoursPerDayRaw * 7).toFixed(1)}h</div>
+                </div>
+              </div>
+
+              <div className="bg-white/10 rounded-2xl p-4 border border-white/20">
+                <div className="text-indigo-200 text-xs uppercase font-bold mb-2">Data de Conclusão</div>
+                <div className="text-2xl font-bold">
+                  {calculation.endDate.toLocaleDateString('pt-BR', { 
+                    day: '2-digit', 
+                    month: 'long', 
+                    year: 'numeric' 
+                  })}
                 </div>
               </div>
 
